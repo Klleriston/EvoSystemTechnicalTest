@@ -8,5 +8,6 @@
         public int Rg { get; set; }
         public Guid DepartmentId { get; set; }
         public Department Department { get; set; }
+        // public virtual Department Department { get; set; } -> backend 
     }
 }
