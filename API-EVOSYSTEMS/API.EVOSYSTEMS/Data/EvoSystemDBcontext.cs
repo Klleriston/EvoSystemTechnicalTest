@@ -8,8 +8,9 @@ namespace API.EVOSYSTEMS.Data
         public EvoSystemDBcontext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        
 
     }
 }

@@ -67,17 +67,12 @@ namespace API.EVOSYSTEMS.Migrations
             modelBuilder.Entity("API.EVOSYSTEMS.Models.Employee", b =>
                 {
                     b.HasOne("API.EVOSYSTEMS.Models.Department", "Department")
-                        .WithMany("Employees")
+                        .WithMany()
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("API.EVOSYSTEMS.Models.Department", b =>
-                {
-                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }

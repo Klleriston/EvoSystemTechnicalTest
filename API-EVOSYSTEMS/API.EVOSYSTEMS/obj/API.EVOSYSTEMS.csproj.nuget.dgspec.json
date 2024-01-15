@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kllea\\OneDrive\\Área de Trabalho\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj": {}
+    "C:\\Users\\klleriston_calriz\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kllea\\OneDrive\\Área de Trabalho\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj": {
+    "C:\\Users\\klleriston_calriz\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kllea\\OneDrive\\Área de Trabalho\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj",
+        "projectUniqueName": "C:\\Users\\klleriston_calriz\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj",
         "projectName": "API.EVOSYSTEMS",
-        "projectPath": "C:\\Users\\kllea\\OneDrive\\Área de Trabalho\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj",
-        "packagesPath": "C:\\Users\\kllea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kllea\\OneDrive\\Área de Trabalho\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\obj\\",
+        "projectPath": "C:\\Users\\klleriston_calriz\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\API.EVOSYSTEMS.csproj",
+        "packagesPath": "C:\\Users\\klleriston_calriz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\klleriston_calriz\\EvoSystemTechnicalTest\\API-EVOSYSTEMS\\API.EVOSYSTEMS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kllea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\klleriston_calriz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
           "net8.0": {

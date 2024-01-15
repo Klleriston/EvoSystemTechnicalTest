@@ -1,4 +1,5 @@
 using API.EVOSYSTEMS.Data;
+using API.EVOSYSTEMS.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<EvoSystemDBcontext>(options => options
     .UseNpgsql(builder.Configuration.GetConnectionString("connectionDB")));
+builder.Services.AddScoped<DepartmentService>();
+builder.Services.AddScoped<EmployeeService>();
+
 
 var app = builder.Build();
 
