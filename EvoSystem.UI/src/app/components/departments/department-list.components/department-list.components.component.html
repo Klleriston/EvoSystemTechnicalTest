@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <h1 class="mb-3">DEPARTMENTS</h1>
+      <table class="table" *ngIf="departments && departments.length > 0">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NAME</th>
+          <th scope="col">ACRONYM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let department of departments">
+          <th>{{department.id}}</th>
+          <th>{{department.name}}</th>
+          <th>{{department.acronym}}</th>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!departments || departments.length <=0">DEPARTMENTS NOT FOUND</p>
+  </div>
