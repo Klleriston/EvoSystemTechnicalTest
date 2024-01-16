@@ -1,4 +1,4 @@
-# Evo System Technical Test
+# Technical Test
 ## Description
 
 The project is a web application developed for job testing by the company Evo Systems.
