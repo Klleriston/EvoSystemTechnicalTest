@@ -34,6 +34,6 @@ export class EmployeesService {
   }
 
   getEmployeesByDepartment(departmentId: string): Observable<EmployeeDTO[]> {
-    return this.http.get<EmployeeDTO[]>(`${this.url}/api/Employees/department`);
+      return this.http.get<EmployeeDTO[]>(`${this.url}/api/Employees/employeeByDepartment/${departmentId}`);
   }
 }

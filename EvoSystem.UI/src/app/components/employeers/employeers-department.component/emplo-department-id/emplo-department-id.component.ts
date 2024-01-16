@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeBody, EmployeeDTO } from 'src/app/models/employee';
 import { EmployeesService } from 'src/app/services/employees/employees.service';
 
@@ -9,23 +9,29 @@ import { EmployeesService } from 'src/app/services/employees/employees.service';
   styleUrls: ['./emplo-department-id.component.css']
 })
 export class EmploDepartmentIDComponent implements OnInit {
-  employees: EmployeeDTO[] = [];
-  constructor(private route:ActivatedRoute,
-    private employeesService:EmployeesService) { }
+ employees: EmployeeDTO[] = [];
+  constructor(private route:ActivatedRoute, private employeesService:EmployeesService, private router:Router) { }
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe((params) => {
-      const departmentId = params['departmentId'];
-      if (departmentId) {
-        this.employeesService.getEmployeesByDepartment(departmentId).subscribe({
-          next: (employees) => {
-            this.employees = employees;
-          },
-        });
-      }
-    });
+  toAddEmployee() {
+    this.router.navigateByUrl('employees/add')
   }
 
+  ngOnInit(): void {
+    this.route.paramMap.subscribe({
+      next: (params) => {
+        const departmentId = params.get('departmentId');
+
+        if (departmentId) {
+          console.log('departmentId:', departmentId);
+          this.employeesService.getEmployeesByDepartment(departmentId)
+            .subscribe({
+              next: (response) => {
+                this.employees = response;
+              }
+            });
+        }
+      }
+    })
+  }
 }
 
-//ver pq nao encontra por id

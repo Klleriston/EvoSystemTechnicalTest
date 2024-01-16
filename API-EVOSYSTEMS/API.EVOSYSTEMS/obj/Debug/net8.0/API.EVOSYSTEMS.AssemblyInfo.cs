@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API.EVOSYSTEMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fc02d22c99f8476bc20ed3e68638b64a8ee7ce3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80c34a0bd2f2eda3bdf0308d76713109db2129c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("API.EVOSYSTEMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API.EVOSYSTEMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

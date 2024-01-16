@@ -25,6 +25,15 @@ namespace API.EVOSYSTEMS.Services
             return employee;
         }
 
+        public IEnumerable<Employee> GetEmployeeByDepartment(Guid departmentId)
+        {
+            var employee = _dbcontext.Employees.Include(e => e.Department)
+                .Where(e => e.DepartmentId == departmentId)
+                .ToList();
+
+            return employee;
+        }
+
         public void CreateEmployee(Employee employee)
         {
             _dbcontext.Employees.Add(employee);

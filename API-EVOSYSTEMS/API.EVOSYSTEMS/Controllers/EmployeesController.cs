@@ -41,6 +41,18 @@ namespace API.EVOSYSTEMS.Controllers
             return Ok(employee);
         }
 
+        [HttpGet("employeeByDepartment/{departmentId}")]
+        public IActionResult GetEmployeeByDepartment(Guid departmentId)
+        {
+            IEnumerable<Employee> employee = _employeeService.GetEmployeeByDepartment(departmentId);
+
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return Ok(employee);
+        }
+
         [HttpPost]
         public IActionResult CreateEmployee([FromBody] Employee employee)
         {
@@ -71,32 +83,6 @@ namespace API.EVOSYSTEMS.Controllers
             _employeeService.DeleteEmployee(id);
 
             return NoContent();
-        }
-
-        [HttpGet("department")]
-        public ActionResult<IEnumerable<Employee>> GetEmployeesByDepartment([FromQuery] string departmentId)
-        {
-            if (string.IsNullOrEmpty(departmentId))
-            {
-                return Ok(_employeeService.GetAllEmployees());
-            }
-
-            if (Guid.TryParse(departmentId, out Guid departmentGuid))
-            {
-                var filteredEmployees = _dbcontext.Employees
-                    .Where(e => e.DepartmentId == departmentGuid)
-                    .ToList();
-
-                return Ok(filteredEmployees);
-            }
-            else
-            {
-                // Handle the case where departmentId is not a valid Guid
-                return BadRequest("Invalid departmentId format");
-            }
-
-            // Ensure a default return value
-            return BadRequest("Invalid departmentId or an unexpected error occurred.");
         }
 
     }

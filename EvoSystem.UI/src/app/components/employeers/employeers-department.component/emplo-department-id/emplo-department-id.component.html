@@ -1,5 +1,6 @@
 <div class="container my-5">
     <h1 class="mb-3">Employees by Department</h1>
+    <button type="button" class="btn btn-primary" (click)="toAddEmployee()">Add Employee</button>
     <table class="table" *ngIf="employees && employees.length > 0">
       <thead>
         <tr>

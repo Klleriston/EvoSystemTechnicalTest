@@ -15,7 +15,7 @@
         <th>{{department.id}}</th>
         <th><a [routerLink]="['/employees', 'department', department.id]">{{department.name}}</a></th>
         <th>{{department.acronym}}</th>
-        <th><a [routerLink]="['/employees/department', department.id]">Edit</a></th>
+        <th><a [routerLink]="['/departments', 'edit', department.id]">Edit</a></th>
       </tr>
     </tbody>
   </table>

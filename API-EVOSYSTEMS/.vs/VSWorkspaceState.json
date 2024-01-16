@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\API.EVOSYSTEMS",
+    "\\API.EVOSYSTEMS\\Controllers",
     "\\API.EVOSYSTEMS\\Data",
     "\\API.EVOSYSTEMS\\Services"
   ],
-  "SelectedNode": "\\API.EVOSYSTEMS\\Services\\EmployeeService.cs",
+  "SelectedNode": "\\API.EVOSYSTEMS\\Controllers\\EmployeesController.cs",
   "PreviewInSolutionExplorer": false
 }
