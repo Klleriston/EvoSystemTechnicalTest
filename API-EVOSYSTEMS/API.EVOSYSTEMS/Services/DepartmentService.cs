@@ -33,6 +33,10 @@ namespace API.EVOSYSTEMS.Services
 
         public void UpdateDepartment(Department department)
         {
+
+            department.Name = department.Name;
+            department.Acronym = department.Acronym;
+
             _dbcontext.Update(department);
             _dbcontext.SaveChanges();
         }

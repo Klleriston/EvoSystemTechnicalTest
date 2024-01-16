@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API.EVOSYSTEMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d65bd179b93714fb9573dafa0bdbb396c472d9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b44d2db00f66ffd79080c1245292ba968d7f935")]
 [assembly: System.Reflection.AssemblyProductAttribute("API.EVOSYSTEMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API.EVOSYSTEMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

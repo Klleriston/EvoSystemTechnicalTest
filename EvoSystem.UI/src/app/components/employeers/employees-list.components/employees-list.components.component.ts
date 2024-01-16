@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from 'src/app/models/employee';
+import { Router } from '@angular/router';
+import { EmployeeDTO } from 'src/app/models/employee';
+import { EmployeesService } from 'src/app/services/employees/employees.service';
 
 @Component({
   selector: 'app-employees-list.components',
@@ -7,11 +9,22 @@ import { Employee } from 'src/app/models/employee';
   styleUrls: ['./employees-list.components.component.css']
 })
 export class EmployeesListComponentsComponent implements OnInit {
-  employees: Employee[] = [];
-  constructor() { }
+  employees: EmployeeDTO[] = [];
+  constructor(private employeeService: EmployeesService, private router: Router) { }
+
+  toAddEmployee() {
+    this.router.navigateByUrl('employees/add')
+  }
 
   ngOnInit(): void {
-    this.employees
+    this.employeeService.getAllEmployees().subscribe({
+      next: (employees) => {
+        this.employees = employees; 
+      },
+      error: (response) => {
+        console.log(response)
+      }
+    })
   }
 
 }

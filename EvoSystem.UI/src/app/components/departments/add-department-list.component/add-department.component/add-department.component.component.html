@@ -1,0 +1,15 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add new Department</h1>
+    <form #Form="ngForm" (ngSubmit)="addDepartment()">
+        <div class="mb-3">
+          <label for="name" class="form-label"><b>NAME</b></label>
+          <input type="text" class="form-control" id="name" placeholder="Please enter a department name" name="name" [(ngModel)]="addDepartmentReq.name">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label"><b>ACRONYM</b></label>
+          <input type="text" class="form-control" id="acronym" placeholder="Please enter an department's acronym" name="acronym" [(ngModel)]="addDepartmentReq.acronym">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+
+</div>

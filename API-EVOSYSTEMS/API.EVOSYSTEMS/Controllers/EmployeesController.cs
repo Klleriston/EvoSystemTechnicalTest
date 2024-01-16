@@ -50,13 +50,15 @@ namespace API.EVOSYSTEMS.Controllers
             return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id }, employee);
         }
 
-        [HttpPost("{id}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateEmployee(Guid id, [FromBody] Employee employee)
         {
+
             if (employee == null || id != employee.Id)
             {
                 return BadRequest();
             }
+
             _employeeService.UpdateEmployee(employee);
             return NoContent();
         }

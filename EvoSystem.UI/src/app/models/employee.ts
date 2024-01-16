@@ -5,7 +5,7 @@ export interface EmployeeBody {
     name: string;
     photo: string;
     rg: number;
-    departmentID: string;
+    departmentId: string;
 }
 
 export interface EmployeeDTO {
@@ -13,9 +13,6 @@ export interface EmployeeDTO {
     name: string;
     photo: string;
     rg: number;
-    departmentID: string;
+    departmentId: string;
     department: Department;
 }
-
-//mandar req -> body
-//receber res -> DTO

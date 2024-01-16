@@ -1,5 +1,6 @@
 <div class="container my-5">
   <h1 class="mb-3">EMPLOYEES</h1>
+  <button type="button" class="btn btn-primary" (click)="toAddEmployee()">Add Employee</button>
     <table class="table" *ngIf="employees && employees.length > 0">
     <thead>
       <tr>
@@ -8,6 +9,7 @@
         <th scope="col">PHOTO</th>
         <th scope="col">RG</th>
         <th scope="col">DEPARTMENT</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -16,7 +18,8 @@
         <th>{{employee.name}}</th>
         <th>{{employee.photo}}</th>
         <th>{{employee.rg}}</th>
-        <th>{{employee.department}}</th>
+        <th>{{employee.department.acronym}}</th>
+        <th><a [routerLink]="['/employees', 'edit', employee.id]">Edit</a></th>
       </tr>
     </tbody>
   </table>

@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Department</h1>
+    <form #Form="ngForm" (ngSubmit)="updateDepartment()">
+        <div class="mb-3">
+          <label for="name" class="form-label"><b>ID</b></label>
+          <input type="text" class="form-control" id="id" name="id" readonly  [(ngModel)]="departmentDetail.id">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label"><b>NAME</b></label>
+          <input type="text" class="form-control" id="name" placeholder="Please enter a department name" name="name" [(ngModel)]="departmentDetail.name">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label"><b>Acronym</b></label>
+          <input type="text" class="form-control" id="acronym" placeholder="Please enter an department's acronym" name="acronym" [(ngModel)]="departmentDetail.acronym">
+        </div>
+        <button type="submit" class="btn btn-primary mr-5">Save</button>
+        <button type="button" class="btn btn-danger" (click)="deleteDepartment(departmentDetail.id)">Delete</button>
+      </form>
+</div>

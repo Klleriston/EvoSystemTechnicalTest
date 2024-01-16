@@ -33,7 +33,16 @@ namespace API.EVOSYSTEMS.Services
 
         public void UpdateEmployee(Employee employee)
         {
-            _dbcontext.Employees.Update(employee);
+            var existEmployee = _dbcontext.Employees.Find(employee.Id);
+
+            existEmployee.Name = employee.Name;
+            existEmployee.Photo = employee.Photo;
+            existEmployee.Rg = employee.Rg;
+
+            existEmployee.DepartmentId = employee.DepartmentId;
+            
+           
+
             _dbcontext.SaveChanges();
         }
 

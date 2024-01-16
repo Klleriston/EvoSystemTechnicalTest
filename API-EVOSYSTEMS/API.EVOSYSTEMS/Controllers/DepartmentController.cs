@@ -49,7 +49,7 @@ namespace API.EVOSYSTEMS.Controllers
                 return CreatedAtAction(nameof(GetDepartmentById), new { id = department.Id }, department);
             }
 
-            [HttpPost("{id}")]
+            [HttpPut("{id}")]
             public IActionResult UpdateDepartment(Guid id, [FromBody] Department department)
             {
                 if (department == null || id != department.Id)
