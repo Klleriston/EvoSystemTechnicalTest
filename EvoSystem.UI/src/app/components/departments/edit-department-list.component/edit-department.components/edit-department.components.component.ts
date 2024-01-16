@@ -14,7 +14,7 @@ export class EditDepartmentComponentsComponent implements OnInit {
     name: '',
     acronym: ''
   }
-  constructor(private route:ActivatedRoute, private departmentService: DepartmentsService, private router:Router) { }
+  constructor(private route: ActivatedRoute, private departmentService: DepartmentsService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe({
@@ -32,7 +32,7 @@ export class EditDepartmentComponentsComponent implements OnInit {
     })
   }
 
-  updateDepartment(){
+  updateDepartment() {
     this.departmentService.updateDepartment(this.departmentDetail.id, this.departmentDetail).subscribe({
       next: (response) => {
         this.router.navigate(['departments'])
@@ -40,7 +40,7 @@ export class EditDepartmentComponentsComponent implements OnInit {
     })
   }
 
-  deleteDepartment(id:string){
+  deleteDepartment(id: string) {
     this.departmentService.deleteDepartment(id).subscribe({
       next: (response) => {
         this.router.navigate(['departments'])

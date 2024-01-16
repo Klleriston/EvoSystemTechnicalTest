@@ -18,7 +18,7 @@ export class AddEmployeeComponent implements OnInit {
     departmentId: '',
 
   }
-  constructor(private employeeService: EmployeesService, private router:Router) { }
+  constructor(private employeeService: EmployeesService, private router: Router) { }
   ngOnInit(): void {
   }
 

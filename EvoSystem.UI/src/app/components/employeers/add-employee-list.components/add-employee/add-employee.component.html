@@ -1,23 +1,27 @@
 <div class="container my-5">
-    <h1 class="mb-3">Add new employee</h1>
-    <form #Form="ngForm" (ngSubmit)="addEmployee()">
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>NAME</b></label>
-          <input type="text" class="form-control" id="name" placeholder="Please enter a name" name="name" [(ngModel)] = "addEmployeeReq.name">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>PHOTO URL</b></label>
-          <input type="text" class="form-control" id="photo" placeholder="Please enter a Potho Url" name="photo" [(ngModel)]="addEmployeeReq.photo">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>RG</b></label>
-          <input type="text" class="form-control" id="RG" placeholder="Please enter a RG" name="rg" [(ngModel)]="addEmployeeReq.rg">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>Department ID</b></label>
-          <input type="text" class="form-control" id="departmentID" placeholder="Please enter a Department ID" name="departmentID" [(ngModel)]="addEmployeeReq.departmentId">
-        </div>
-        <button type="submit" class="btn btn-primary">Save</button>
-      </form>
+  <h1 class="mb-3">Add new employee</h1>
+  <form #Form="ngForm" (ngSubmit)="addEmployee()">
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>NAME</b></label>
+      <input type="text" class="form-control" id="name" placeholder="Please enter a name" name="name"
+        [(ngModel)]="addEmployeeReq.name">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>PHOTO URL</b></label>
+      <input type="text" class="form-control" id="photo" placeholder="Please enter a Potho Url" name="photo"
+        [(ngModel)]="addEmployeeReq.photo">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>RG</b></label>
+      <input type="text" class="form-control" id="RG" placeholder="Please enter a RG" name="rg"
+        [(ngModel)]="addEmployeeReq.rg">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>Department ID</b></label>
+      <input type="text" class="form-control" id="departmentID" placeholder="Please enter a Department ID"
+        name="departmentID" [(ngModel)]="addEmployeeReq.departmentId">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
 
 </div>

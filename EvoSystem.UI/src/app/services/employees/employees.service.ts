@@ -9,14 +9,14 @@ import { environment } from 'src/environments/environment';
 })
 export class EmployeesService {
 
-  url:string = environment.baseAPIurl;
+  url: string = environment.baseAPIurl;
   constructor(private http: HttpClient) { }
 
-  getAllEmployees(): Observable<EmployeeDTO[]>{
+  getAllEmployees(): Observable<EmployeeDTO[]> {
     return this.http.get<EmployeeDTO[]>(`${this.url}/api/Employees`)
   }
 
-  getEmployeeByID(id:string): Observable<EmployeeDTO> {
+  getEmployeeByID(id: string): Observable<EmployeeDTO> {
     return this.http.get<EmployeeDTO>(`${this.url}/api/Employees/${id}`)
   }
 
@@ -25,13 +25,15 @@ export class EmployeesService {
     return this.http.post<EmployeeBody>(`${this.url}/api/Employees`, addEmployeeReq)
   }
 
-  updateEmployee(id:string, updateEmployeeReq: EmployeeBody):Observable<EmployeeBody>{
+  updateEmployee(id: string, updateEmployeeReq: EmployeeBody): Observable<EmployeeBody> {
     return this.http.put<EmployeeBody>(`${this.url}/api/Employees/${id}`, updateEmployeeReq)
   }
 
-  deleteEmployee(id:string): Observable<EmployeeBody>{
+  deleteEmployee(id: string): Observable<EmployeeBody> {
     return this.http.delete<EmployeeBody>(`${this.url}/api/Employees/${id}`)
   }
 
-  
+  getEmployeesByDepartment(departmentId: string): Observable<EmployeeDTO[]> {
+    return this.http.get<EmployeeDTO[]>(`${this.url}/api/Employees/department`);
+  }
 }

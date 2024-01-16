@@ -10,15 +10,16 @@ import { DepartmentsService } from 'src/app/services/departments/departments.ser
 })
 export class DepartmentListComponentsComponent implements OnInit {
   departments: Department[] = [];
-  constructor(private departmentService: DepartmentsService,  private router: Router) { }
+  constructor(private departmentService: DepartmentsService, private router: Router) { }
 
   toAddDepartment() {
     this.router.navigateByUrl('departments/add')
   }
 
   showEmployeesByDepartment(departmentId: string) {
-    this.router.navigate(['employees'], { queryParams: { departmentId } });
+    this.router.navigate(['employees/department', departmentId]);
   }
+  
 
   ngOnInit(): void {
     this.departmentService.getAllDepartments().subscribe({

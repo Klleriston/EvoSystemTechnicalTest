@@ -1,1 +1,27 @@
-<p>emplo-department-id works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Employees by Department</h1>
+    <table class="table" *ngIf="employees && employees.length > 0">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NAME</th>
+          <th scope="col">PHOTO</th>
+          <th scope="col">RG</th>
+          <th scope="col">DEPARTMENT</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <th>{{employee.id}}</th>
+          <th>{{employee.name}}</th>
+          <th>{{employee.photo}}</th>
+          <th>{{employee.rg}}</th>
+          <th>{{employee.departmentId}}</th>
+          <th><a [routerLink]="['/employees', 'edit', employee.id]">Edit</a></th>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!employees || employees.length <= 0">No employees found for the selected department.</p>
+  </div>
+  

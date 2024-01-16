@@ -19,7 +19,7 @@ export class EmployeesListComponentsComponent implements OnInit {
   ngOnInit(): void {
     this.employeeService.getAllEmployees().subscribe({
       next: (employees) => {
-        this.employees = employees; 
+        this.employees = employees;
       },
       error: (response) => {
         console.log(response)

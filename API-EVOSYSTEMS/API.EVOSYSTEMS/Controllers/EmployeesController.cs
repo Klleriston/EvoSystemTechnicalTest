@@ -2,6 +2,7 @@
 using API.EVOSYSTEMS.Models;
 using API.EVOSYSTEMS.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.EVOSYSTEMS.Controllers
 {
@@ -9,11 +10,12 @@ namespace API.EVOSYSTEMS.Controllers
     [Route("api/[controller]")]
     public class EmployeesController : Controller
     {
-
+        private readonly EvoSystemDBcontext _dbcontext;
         private readonly EmployeeService _employeeService;
-        public EmployeesController(EmployeeService employeeService)
+        public EmployeesController(EmployeeService employeeService, EvoSystemDBcontext dbcontext)
         {
-            _employeeService = employeeService; 
+            _employeeService = employeeService;
+            _dbcontext = dbcontext;
         }
 
         [HttpGet]
@@ -64,11 +66,38 @@ namespace API.EVOSYSTEMS.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteEmployee(Guid id) 
-        { 
+        public IActionResult DeleteEmployee(Guid id)
+        {
             _employeeService.DeleteEmployee(id);
 
             return NoContent();
         }
+
+        [HttpGet("department")]
+        public ActionResult<IEnumerable<Employee>> GetEmployeesByDepartment([FromQuery] string departmentId)
+        {
+            if (string.IsNullOrEmpty(departmentId))
+            {
+                return Ok(_employeeService.GetAllEmployees());
+            }
+
+            if (Guid.TryParse(departmentId, out Guid departmentGuid))
+            {
+                var filteredEmployees = _dbcontext.Employees
+                    .Where(e => e.DepartmentId == departmentGuid)
+                    .ToList();
+
+                return Ok(filteredEmployees);
+            }
+            else
+            {
+                // Handle the case where departmentId is not a valid Guid
+                return BadRequest("Invalid departmentId format");
+            }
+
+            // Ensure a default return value
+            return BadRequest("Invalid departmentId or an unexpected error occurred.");
+        }
+
     }
 }

@@ -1,28 +1,33 @@
 <div class="container my-5">
-    <h1 class="mb-3">Edit employee</h1>
-    <form #Form="ngForm" (ngSubmit)="updateEmployee()">
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>ID</b></label>
-          <input type="text" class="form-control" id="id" placeholder="Please enter a name" name="id" readonly  [(ngModel)]="employeeDetail.id">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>NAME</b></label>
-          <input type="text" class="form-control" id="name" placeholder="Please enter a name" name="name" [(ngModel)]="employeeDetail.name">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>PHOTO URL</b></label>
-          <input type="text" class="form-control" id="photo" placeholder="Please enter a Potho Url" name="photo" [(ngModel)]="employeeDetail.photo">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>RG</b></label>
-          <input type="text" class="form-control" id="RG" placeholder="Please enter a RG" name="rg" [(ngModel)]="employeeDetail.rg">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label"><b>Department ID</b></label>
-          <input type="text" class="form-control" id="departmentID" placeholder="Please enter a Department ID" name="departmentID" [(ngModel)]="employeeDetail.departmentId">
-        </div>
-        <button type="submit" class="btn btn-primary mr-5">Save</button>
-        <button type="button" class="btn btn-danger" (click)="deleteEmployee(employeeDetail.id)">Delete</button>
-      </form>
+  <h1 class="mb-3">Edit employee</h1>
+  <form #Form="ngForm" (ngSubmit)="updateEmployee()">
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>ID</b></label>
+      <input type="text" class="form-control" id="id" placeholder="Please enter a name" name="id" readonly
+        [(ngModel)]="employeeDetail.id">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>NAME</b></label>
+      <input type="text" class="form-control" id="name" placeholder="Please enter a name" name="name"
+        [(ngModel)]="employeeDetail.name">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>PHOTO URL</b></label>
+      <input type="text" class="form-control" id="photo" placeholder="Please enter a Potho Url" name="photo"
+        [(ngModel)]="employeeDetail.photo">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>RG</b></label>
+      <input type="text" class="form-control" id="RG" placeholder="Please enter a RG" name="rg"
+        [(ngModel)]="employeeDetail.rg">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label"><b>Department ID</b></label>
+      <input type="text" class="form-control" id="departmentID" placeholder="Please enter a Department ID"
+        name="departmentID" [(ngModel)]="employeeDetail.departmentId">
+    </div>
+    <button type="submit" class="btn btn-primary mr-5">Save</button>
+    <button type="button" class="btn btn-danger" (click)="deleteEmployee(employeeDetail.id)">Delete</button>
+  </form>
 
 </div>

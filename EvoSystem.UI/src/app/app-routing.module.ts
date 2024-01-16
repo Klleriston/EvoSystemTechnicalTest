@@ -9,14 +9,14 @@ import { AddDepartmentComponentComponent } from './components/departments/add-de
 import { EmploDepartmentIDComponent } from './components/employeers/employeers-department.component/emplo-department-id/emplo-department-id.component';
 
 const routes: Routes = [
-  {path: '', component:DepartmentListComponentsComponent},
-  {path: 'departments', component:DepartmentListComponentsComponent},
-  {path: 'departments/add', component: AddDepartmentComponentComponent},
-  {path: 'departments/edit/:id', component: EditDepartmentComponentsComponent},
-  {path: 'employees', component:EmployeesListComponentsComponent},
-  {path: 'employees/add', component: AddEmployeeComponent},
-  {path: 'employees/edit/:id', component: EditEmployeeComponent},
-  {path: 'employees/department/:id', component: EmploDepartmentIDComponent},
+  { path: '', component: DepartmentListComponentsComponent },
+  { path: 'departments', component: DepartmentListComponentsComponent },
+  { path: 'departments/add', component: AddDepartmentComponentComponent },
+  { path: 'departments/edit/:id', component: EditDepartmentComponentsComponent },
+  { path: 'employees', component: EmployeesListComponentsComponent },
+  { path: 'employees/add', component: AddEmployeeComponent },
+  { path: 'employees/edit/:id', component: EditEmployeeComponent },
+  { path: 'employees/department/:id ', component: EmploDepartmentIDComponent },
 
 ];
 

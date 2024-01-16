@@ -14,7 +14,7 @@ export class AddDepartmentComponentComponent implements OnInit {
     name: '',
     acronym: ''
   }
-  constructor(private departmentService: DepartmentsService, private router:Router) { }
+  constructor(private departmentService: DepartmentsService, private router: Router) { }
 
   ngOnInit(): void {
   }

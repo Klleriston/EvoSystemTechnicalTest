@@ -1,23 +1,23 @@
 <div class="container my-5">
-    <h1 class="mb-3">DEPARTMENTS</h1>
-    <button type="button" class="btn btn-primary" (click)="toAddDepartment()">Add Department</button>
-      <table class="table" *ngIf="departments && departments.length > 0">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">NAME</th>
-          <th scope="col">ACRONYM</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let department of departments">
-          <th>{{department.id}}</th>
-          <th><a [routerLink]="['/employees', 'department', department.id]">{{department.name}}</a></th>
-          <th>{{department.acronym}}</th>
-          <th><a [routerLink]="['/departments', 'edit', department.id]">Edit</a></th>
-        </tr>
-      </tbody>
-    </table>
-    <p *ngIf="!departments || departments.length <=0">DEPARTMENTS NOT FOUND</p>
-  </div>
+  <h1 class="mb-3">DEPARTMENTS</h1>
+  <button type="button" class="btn btn-primary" (click)="toAddDepartment()">Add Department</button>
+  <table class="table" *ngIf="departments && departments.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NAME</th>
+        <th scope="col">ACRONYM</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let department of departments">
+        <th>{{department.id}}</th>
+        <th><a [routerLink]="['/employees', 'department', department.id]">{{department.name}}</a></th>
+        <th>{{department.acronym}}</th>
+        <th><a [routerLink]="['/employees/department', department.id]">Edit</a></th>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!departments || departments.length <=0">DEPARTMENTS NOT FOUND</p>
+</div>

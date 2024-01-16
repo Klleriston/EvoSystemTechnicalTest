@@ -17,7 +17,7 @@ export class EditEmployeeComponent implements OnInit {
     rg: 0,
     departmentId: '',
   }
-  constructor(private route:ActivatedRoute, private employeeService: EmployeesService, private router:Router) { }
+  constructor(private route: ActivatedRoute, private employeeService: EmployeesService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe({
@@ -35,7 +35,7 @@ export class EditEmployeeComponent implements OnInit {
     })
   }
 
-  updateEmployee() {    
+  updateEmployee() {
     this.employeeService.updateEmployee(this.employeeDetail.id, this.employeeDetail).subscribe({
       next: (response) => {
         this.router.navigate(['employees']);
@@ -45,7 +45,7 @@ export class EditEmployeeComponent implements OnInit {
 
   }
 
-  deleteEmployee(id:string) {
+  deleteEmployee(id: string) {
     this.employeeService.deleteEmployee(id).subscribe({
       next: (response) => {
         this.router.navigate(['employees'])
